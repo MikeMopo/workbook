@@ -2,14 +2,12 @@ package com.mikemopo.workbook.model;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
-@Data @Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Data @Getter @Setter @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "USER_TBL")
 public class User {
@@ -22,6 +20,8 @@ public class User {
 	private String dob;
 	private String jobtitle;
 
-	
 
+	public User(User user) {
+
+	}
 }
